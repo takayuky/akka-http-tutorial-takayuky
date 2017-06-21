@@ -38,8 +38,11 @@ lazy val coreSettings = coreLibraryDependencies ++ coreTestingLibraryDependencie
 
 lazy val coreLibraryDependencies = Seq(
   libraryDependencies ++= Seq(
-    "org.typelevel"         %% "cats"                % "0.9.0",
-    "org.slf4j"             %  "slf4j-nop"           % "1.7.25"
+    "org.typelevel" %% "cats"          % "0.9.0",
+    "io.circe"      %% "circe-core"    % "0.8.0",
+    "io.circe"      %% "circe-generic" % "0.8.0",
+    "io.circe"      %% "circe-parser"  % "0.8.0",
+    "org.slf4j"     %  "slf4j-nop"     % "1.7.25"
   )
 )
 
@@ -64,7 +67,7 @@ lazy val apiMainClassSettings = Seq(
 
 lazy val apiLibraryDependencies = Seq(
   libraryDependencies ++= Seq(
-    "com.typesafe.akka" %% "akka-http"            % "10.0.8",
-    "com.typesafe.akka" %% "akka-http-spray-json" % "10.0.7"
+    "com.typesafe.akka" %% "akka-http"       % "10.0.8",
+    "de.heikoseeberger" %% "akka-http-circe" % "1.16.1"
   )
 )
